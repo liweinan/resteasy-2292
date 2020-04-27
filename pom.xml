@@ -15,9 +15,33 @@
         <jetty.maven.plugin.ver>9.4.24.v20191120</jetty.maven.plugin.ver>
         <javax.servlet.ver>4.0.1</javax.servlet.ver>
         <jupiter.engine.ver>5.1.0</jupiter.engine.ver>
+        <jersey.version>3.0.0-M1</jersey.version>
     </properties>
 
     <dependencies>
+        <!--JERSEY-->
+        <dependency>
+            <groupId>org.glassfish.jersey.test-framework</groupId>
+            <artifactId>jersey-test-framework-core</artifactId>
+            <version>${jersey.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-server</artifactId>
+            <version>${jersey.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>${jersey.version}</version>
+        </dependency>
+        <!--        JERSEY TEST-->
+        <dependency>
+            <groupId>org.glassfish.jersey.test-framework.providers</groupId>
+            <artifactId>jersey-test-framework-provider-inmemory</artifactId>
+            <version>${jersey.version}</version>
+        </dependency>
+        <!--        resteasy-->
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-bom</artifactId>
@@ -46,11 +70,11 @@
         <!-- RESTEASY-2461: This will fail the Jetty startup process: -->
         <!--        Caused by: java.lang.RuntimeException: RESTEASY003935: Unable to instantiate InjectorFactory implementation.-->
         <!--        Caused by: java.lang.RuntimeException: RESTEASY010605: Unable to lookup BeanManager.-->
-<!--        <dependency>-->
-<!--            <groupId>org.jboss.resteasy</groupId>-->
-<!--            <artifactId>resteasy-client-microprofile</artifactId>-->
-<!--            <version>${resteasy.version}</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.jboss.resteasy</groupId>-->
+        <!--            <artifactId>resteasy-client-microprofile</artifactId>-->
+        <!--            <version>${resteasy.version}</version>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
