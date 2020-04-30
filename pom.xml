@@ -16,6 +16,7 @@
         <javax.servlet.ver>4.0.1</javax.servlet.ver>
         <jupiter.engine.ver>5.1.0</jupiter.engine.ver>
         <jersey.version>3.0.0-M1</jersey.version>
+        <activation.ver>1.1.1</activation.ver>
     </properties>
 
     <dependencies>
@@ -52,6 +53,12 @@
             <version>${jersey.version}</version>
         </dependency>
         <!--        resteasy-->
+        <!-- https://mvnrepository.com/artifact/javax.activation/activation -->
+        <dependency>
+            <groupId>javax.activation</groupId>
+            <artifactId>activation</artifactId>
+            <version>${activation.ver}</version>
+        </dependency>
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-bom</artifactId>
